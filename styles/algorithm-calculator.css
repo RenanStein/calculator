@@ -27,6 +27,9 @@ main section input{
 
 #box_number{
     width: 250px;
+    height: 40px;
+    border: 1px solid black;
+    margin: auto;
 }
 
 .box_zero{

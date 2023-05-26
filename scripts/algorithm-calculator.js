@@ -1,26 +1,15 @@
-var resul = window.document.getElementById('box_number')
-addEventListener('load', recarregar)
-
-function recarregar(){
-    resul.innerHTML = '0'
-}
-
-function adicionar(num){
-    var numero = document.getElementById('box_number').innerHTML;
-    document.getElementById('box_number').innerHTML = numero + num;
-}
-
-function clear_all(){
-    window.document.getElementById('box_number').innerHTML = "0"
+function add(value){
+    let res = window.document.getElementById('box_number').innerHTML
+    window.document.getElementById('box_number').innerHTML = res + value
 }
 
 function calcular(){
-    var valores = window.document.getElementById('box_number').innerHTML
-    if (valores){
-        window.document.getElementById('box_number').innerHTML = eval(valores)
-    } else {
-        window.document.getElementById('box_number').innerHTML = '[Erro] Valor inválido'
-    }
-    console.log(valores.length)
-}
+    let total = window.document.getElementById('box_number').innerHTML
 
+    let numero = Number(total.value)
+    if(numero){
+        window.document.getElementById('box_number').innerHTML = numero
+    } else {
+        window.document.getElementById('box_number').innerHTML = "[Erro]"
+    }
+}
